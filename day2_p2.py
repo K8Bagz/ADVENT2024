@@ -20,7 +20,7 @@ def Score(report):
     for i in range(len(report)):
         distance = Distance(report[i],report[i-1])
         temp_trend = Trend(report[i],report[i-1])
-        if distance <=3 and trend !='Start' and temp_trend == trend : score +=1
+        if distance <=3 and distance >=1 and trend !='Start' and temp_trend == trend : score +=1
         trend =temp_trend
     return score
     
