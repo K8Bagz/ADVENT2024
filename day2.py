@@ -9,7 +9,7 @@ safe_count = 0
 # part 1 Receives a list of distances and checks if all are max 3
 # part 2 Receives a list of distances minus one element
 def DistanceLimit(distances):
-    return all(x <=3 for x in distances)
+    return all(x <=3 and x>=1 for x in distances)
     
     
 # part 1 Receives a list of trends (True : positive, False : negative) and checks if all are the same.
