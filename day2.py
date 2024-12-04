@@ -6,14 +6,12 @@ file = open('INPUT_DAY2.txt','r')
 safe_count = 0
 
 
-# part 1 Receives a list of distances and checks if all are max 3
-# part 2 Receives a list of distances minus one element
+# Receives a list of distances and checks if all are max 3
 def DistanceLimit(distances):
     return all(x <=3 and x>=1 for x in distances)
     
     
-# part 1 Receives a list of trends (True : positive, False : negative) and checks if all are the same.
-# part 2 Receives a list of trends minus one element
+# Receives a list of trends (True : positive, False : negative) and checks if all are the same.
 def IncOrDec(trends):
     return all(x == trends[0] for x in trends)
 
@@ -39,7 +37,7 @@ for report in file.readlines():
         
         if result_distance and result_trend:
             safe_count+=1
-            break
+            break # PART 2 : if one combination is good, the report is safe.
 
         
 print(safe_count)
